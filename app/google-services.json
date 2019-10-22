@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "173385890715",
+    "firebase_url": "https://gluck-d670c.firebaseio.com",
+    "project_id": "gluck-d670c",
+    "storage_bucket": "gluck-d670c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:173385890715:android:c1e673437ddd74bd8b3f3e",
+        "android_client_info": {
+          "package_name": "com.example.gluck"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "173385890715-egr2nb6148j7q81l68krkr56k7ffrod0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpCTzYwss3Vg-FanpAcsbmz5IL6blVDNY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "173385890715-egr2nb6148j7q81l68krkr56k7ffrod0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
