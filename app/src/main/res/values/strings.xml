@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Gluck</string>
+    <string name="action_settings">Settings</string>
+    <string name="USERNAME">username</string>
+    <string name="email">email</string>
+    <string name="PASSWORD">Password</string>
+    <string name="password">password</string>
+    <string name="login">LOGIN</string>
+    <string name="NewUser">New user? Register here</string>
+    <string name="Signup">SIGNUP</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="emails">Email Address</string>
+    <string name="pass">Password</string>
+    <string name="logo">TODO</string>
+</resources>
