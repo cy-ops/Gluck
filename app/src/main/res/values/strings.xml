@@ -14,4 +14,7 @@
     <string name="pass">Password</string>
     <string name="logo">TODO</string>
     <string name="title_activity_maps">Map</string>
+    <string name="title_location_permission">title_location_permission</string>
+    <string name="text_location_pernission">text_location_permission</string>
+    <string name="ok">ok</string>
 </resources>

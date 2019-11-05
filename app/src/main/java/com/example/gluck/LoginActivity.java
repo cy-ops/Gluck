@@ -73,11 +73,10 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        checkLocationPermission();
+
 
     }
-
-
-
     public void SignIn(){
         String email = emaillogin.getText().toString().trim();
         String password = passwordlogin.getText().toString().trim();
@@ -159,6 +158,20 @@ public class LoginActivity extends AppCompatActivity {
 
         if (ActivityCompat.shouldShowRequestPermissionRationale(this,
                 Manifest.permission.ACCESS_FINE_LOCATION)) {
+            new AlertDialog.Builder(this)
+                    .setTitle(R.string.title_location_permission)
+                    .setMessage(R.string.text_location_pernission)
+                    .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            ActivityCompat.requestPermissions(LoginActivity.this ,
+                                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                                    MY_PERMISSIONS_REQUEST_LOCATION);
+
+                        }
+                    })
+                    .create()
+                    .show();
 
         } else {
 
