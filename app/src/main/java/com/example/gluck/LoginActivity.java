@@ -150,6 +150,7 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+
     public boolean checkLocationPermission(){
 
     if (ContextCompat.checkSelfPermission(this,Manifest.permission.ACCESS_FINE_LOCATION)
