@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
 
-        recyclerView = recyclerView.findViewById(R.id.recyclermain);
-        InitiateRecycler();
+        //recyclerView = recyclerView.findViewById(R.id.recyclermain);
+        //InitiateRecycler();
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -40,9 +40,9 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void InitiateRecycler() {
+    //public void InitiateRecycler() {
 
-    }
+   // }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
