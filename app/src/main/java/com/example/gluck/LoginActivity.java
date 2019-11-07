@@ -36,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
     private ProgressDialog progressDialog;
     private FirebaseAuth firebaseAuth;
 
-    public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
+
 
 
 
@@ -73,7 +73,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        checkLocationPermission();
+
 
 
     }
@@ -150,61 +150,5 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-
-    public boolean checkLocationPermission(){
-
-    if (ContextCompat.checkSelfPermission(this,Manifest.permission.ACCESS_FINE_LOCATION)
-            != PackageManager.PERMISSION_GRANTED) {
-
-
-        if (ActivityCompat.shouldShowRequestPermissionRationale(this,
-                Manifest.permission.ACCESS_FINE_LOCATION)) {
-            new AlertDialog.Builder(this)
-                    .setTitle(R.string.title_location_permission)
-                    .setMessage(R.string.text_location_pernission)
-                    .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
-                            ActivityCompat.requestPermissions(LoginActivity.this ,
-                                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
-                                    MY_PERMISSIONS_REQUEST_LOCATION);
-
-                        }
-                    })
-                    .create()
-                    .show();
-
-        } else {
-
-            ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
-                    MY_PERMISSIONS_REQUEST_LOCATION);
-
-
-        }
-        return false;
-    }else
-        {return true ;
-
-    }
 }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode,
-                                           String[] permissions, int[] grantResults) {
-        switch (requestCode) {
-            case MY_PERMISSIONS_REQUEST_LOCATION: {
-
-                if (grantResults.length > 0
-                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-
-                } else {
-
-                }
-                return;
-            }
-
-
-        }
-    }
-}
