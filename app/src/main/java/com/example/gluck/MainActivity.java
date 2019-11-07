@@ -79,7 +79,6 @@ public class MainActivity extends AppCompatActivity {
                 .build();
         adView.loadAd(adRequest);
 
-
     }
 
     //public void InitiateRecycler() {
