@@ -67,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
         checkLocationPermission();
 
         createLocationRequest();
+        
 
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
             @Override
@@ -74,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
         AdView adView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder()
                 .build();
