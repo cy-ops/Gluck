@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "173385890715-dgm8uo5jq15u7kml1867jomia3e23abt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gluck",
+            "certificate_hash": "21efee77d69916d3d646aad9a366e61f68eb6c1f"
+          }
+        },
+        {
           "client_id": "173385890715-egr2nb6148j7q81l68krkr56k7ffrod0.apps.googleusercontent.com",
           "client_type": 3
         }
