@@ -1,32 +1,32 @@
 package com.example.gluck;
 
 public class Bar {
-    private String About;
-    private String Brand;
-    private String Category;
-    private String Location;
-    private String Offer;
+    private String about;
+    private String brand;
+    private String category;
+    private String location;
+    private String offer;
 
     public Bar() {
     }
 
     public String getAbout() {
-        return About;
+        return about;
     }
 
     public String getBrand() {
-        return Brand;
+        return brand;
     }
 
     public String getCategory() {
-        return Category;
+        return category;
     }
 
     public String getLocation() {
-        return Location;
+        return location;
     }
 
     public String getOffer() {
-        return Offer;
+        return offer;
     }
 }

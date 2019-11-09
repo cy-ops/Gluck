@@ -41,9 +41,9 @@ public class TabsAcessorAdapter extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
         switch (position) {
             case 0:
-                return "Home";
+                return "Bar";
             case 1:
-                return "Itinerary";
+                return "Restaurant";
             default:
                 return null;
         }

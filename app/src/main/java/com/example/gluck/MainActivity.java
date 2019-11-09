@@ -23,6 +23,8 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.tabs.TabLayout;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,6 +32,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 
 import android.view.View;
 import android.view.Menu;
@@ -42,8 +45,11 @@ public class MainActivity extends AppCompatActivity {
     public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
     final int REQUEST_CHECK_SETTINGS = 0x1;
 
-
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
     private RecyclerView recyclerView;
+    private ViewPager mViewPager;
+    private TabsAcessorAdapter mTabAcessoradapter;
+    private TabLayout mTabLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,14 +61,6 @@ public class MainActivity extends AppCompatActivity {
         //recyclerView = recyclerView.findViewById(R.id.recyclermain);
         //InitiateRecycler();
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         checkLocationPermission();
 
@@ -80,6 +78,15 @@ public class MainActivity extends AppCompatActivity {
         AdRequest adRequest = new AdRequest.Builder()
                 .build();
         adView.loadAd(adRequest);
+
+
+        mViewPager = (ViewPager) findViewById(R.id.main_tabs_pager);
+        mTabAcessoradapter = new TabsAcessorAdapter(getSupportFragmentManager());
+        mViewPager.setAdapter(mTabAcessoradapter);
+
+
+        mTabLayout = (TabLayout) findViewById(R.id.main_tabs);
+        mTabLayout.setupWithViewPager(mViewPager);
 
     }
 
@@ -140,6 +147,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
     public boolean checkLocationPermission () {
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
