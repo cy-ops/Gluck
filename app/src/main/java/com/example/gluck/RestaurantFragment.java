@@ -1,6 +1,7 @@
 package com.example.gluck;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -14,6 +15,7 @@ import android.view.ViewGroup;
 
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 
@@ -39,7 +41,6 @@ public class RestaurantFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_restaurant, container, false);
         recyclerView = view.findViewById(R.id.restaurantRecycler);
         setUpRecycler();
-        // Inflate the layout for this fragment
         return view;
     }
 
@@ -50,6 +51,15 @@ public class RestaurantFragment extends Fragment {
                 .build();
 
         adapter = new BarAdaptor(options);
+
+        adapter.setOnItemClickListener(new BarAdaptor.OnItemClickListener() {
+            @Override
+            public void onItemClick(DocumentSnapshot documentSnapshot, int position) {
+                Intent intent = new Intent(getContext(), RestaurantDetailActivity.class);
+                intent.putExtra("restaurant", documentSnapshot.getId());
+                startActivity(intent);
+            }
+        });
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(adapter);
 
@@ -70,6 +80,5 @@ public class RestaurantFragment extends Fragment {
         if (adapter != null) {
             adapter.stopListening();
         }
-
     }
 }
