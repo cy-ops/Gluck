@@ -21,6 +21,8 @@ import com.google.firebase.firestore.Query;
 /**
  * A simple {@link Fragment} subclass.
  */
+
+//My name is Bancy
 public class RestaurantFragment extends Fragment {
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
     private CollectionReference Ref = db.collection("Restaurants");
