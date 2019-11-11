@@ -55,9 +55,12 @@ public class BarFragment extends Fragment {
         adapter.setOnItemClickListener(new BarAdaptor.OnItemClickListener() {
             @Override
             public void onItemClick(DocumentSnapshot documentSnapshot, int position) {
-                Intent intent = new Intent(getContext(), RestaurantDetailActivity.class);
+                Intent intent = new Intent(getContext(), BarDetailActivity.class);
+                intent.putExtra("bar", documentSnapshot.getId());
+                startActivity(intent);
             }
         });
+
         recyclerView.setAdapter(adapter);
     }
 

@@ -62,6 +62,7 @@ public class RestaurantFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(adapter);
 
