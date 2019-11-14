@@ -24,6 +24,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import androidx.annotation.NonNull;
@@ -109,7 +110,17 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_inputContent) {
+            android.content.Intent intent = new android.content.Intent(this, InputActivity.class);
+            startActivity(intent);
+            return true;
+        }
+
+        if(id==R.id.action_logout) {
+            FirebaseAuth.getInstance().signOut();
+            android.content.Intent intent = new android.content.Intent(this, LoginActivity.class);
+            startActivity(intent);
+            finish();
             return true;
         }
 

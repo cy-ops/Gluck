@@ -2,9 +2,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.gluck.MainActivity">
+
     <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:id="@+id/action_inputContent"
+        android:title="Input Content"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_logout"
+        app:showAsAction="never"
+        android:title="LogOut"/>
 </menu>
