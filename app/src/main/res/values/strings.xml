@@ -7,7 +7,7 @@
     <string name="password">password</string>
     <string name="login">LOGIN</string>
     <string name="NewUser">New user? Register here</string>
-    <string name="Signup">SIGNUP</string>
+    <string name="Signup">Sign Up</string>
     <string name="first_name">First Name</string>
     <string name="last_name">Last Name</string>
     <string name="emails">Email Address</string>
