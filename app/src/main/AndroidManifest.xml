@@ -19,6 +19,7 @@
         <activity android:name=".InputActivity"></activity>
         <activity android:name=".BarDetailActivity" />
         <activity android:name=".RestaurantDetailActivity" />
+        <activity android:name=".ResetPassword"></activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

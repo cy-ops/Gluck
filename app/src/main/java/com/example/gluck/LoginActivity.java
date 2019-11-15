@@ -35,6 +35,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText passwordlogin;
     private Button btnLogin;
     private TextView Signup;
+    private TextView Reset_Password;
 
     private ProgressDialog progressDialog;
     private FirebaseAuth firebaseAuth;
@@ -61,11 +62,18 @@ public class LoginActivity extends AppCompatActivity {
         passwordlogin = findViewById(R.id.passwordlogin);
         progressDialog = new ProgressDialog(this);
         Signup = findViewById(R.id.Signup);
+        Reset_Password = findViewById(R.id.Reset_Password);
 
         Signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openRegisterActivity();
+            }
+        });
+        Reset_Password.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openResetPassword();
             }
         });
         btnLogin = findViewById(R.id.btnLogin);
@@ -159,6 +167,12 @@ public class LoginActivity extends AppCompatActivity {
         Intent intent = new Intent(this, RegisterActivity.class);
         startActivity(intent);
 
+    }
+
+    public void openResetPassword() {
+
+        Intent intents = new Intent(this, ResetPassword.class);
+        startActivity(intents);
     }
 
 }

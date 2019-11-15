@@ -25,6 +25,7 @@
     <string name="brand">brand</string>
     <string name="offer">offer</string>
     <string name="About">about</string>
-    <string name="pass_reset">reset password</string>
+    <string name="pass_reset">Reset Password</string>
     <string name="reset">reset</string>
+    <string name="Reset_Password">Forgotten Password?</string>
 </resources>
