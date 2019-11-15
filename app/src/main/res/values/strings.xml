@@ -21,7 +21,8 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="About">About:</string>
-    <string name="offer">Offer:</string>
-    <string name="brand">Brand</string>
+    <string name="Logout">logout</string>
+    <string name="brand">brand</string>
+    <string name="offer">offer</string>
+    <string name="About">about</string>
 </resources>
