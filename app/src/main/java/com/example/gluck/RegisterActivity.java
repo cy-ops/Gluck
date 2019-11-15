@@ -3,9 +3,12 @@ package com.example.gluck;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -65,6 +68,15 @@ public class RegisterActivity extends AppCompatActivity {
         final String lastname = lastnamereg.getText().toString().trim();
         final String email = emailreg.getText().toString().trim();
         final String password = passwordreg.getText().toString().trim();
+
+
+
+        ConnectivityManager cm = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+        if(!(activeNetwork!=null && activeNetwork.isConnectedOrConnecting())) {
+            Toast.makeText(this, "Please connect to the internet", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         if(TextUtils.isEmpty(firstname)){
             //firstname is empty

@@ -8,10 +8,13 @@ import androidx.core.content.ContextCompat;
 import android.Manifest;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -80,6 +83,14 @@ public class LoginActivity extends AppCompatActivity {
     public void SignIn(){
         String email = emaillogin.getText().toString().trim();
         String password = passwordlogin.getText().toString().trim();
+
+
+        ConnectivityManager cm = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+        if(!(activeNetwork!=null && activeNetwork.isConnectedOrConnecting())) {
+            Toast.makeText(this, "Please connect to the internet", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         if(TextUtils.isEmpty(email)){
             //email is empty
