@@ -6,6 +6,7 @@ public class Bar {
     private String category;
     private String location;
     private String offer;
+    private String image;
 
     public Bar() {
     }
@@ -28,5 +29,9 @@ public class Bar {
 
     public String getOffer() {
         return offer;
+    }
+
+    public String getImage(){
+        return image;
     }
 }
