@@ -71,6 +71,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
         android:text="Submit"
+        android:onClick="addPlace"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"

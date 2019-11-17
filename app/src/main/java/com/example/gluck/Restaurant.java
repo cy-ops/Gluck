@@ -3,11 +3,17 @@ package com.example.gluck;
 public class Restaurant {
     private String About;
     private String Brand;
-    private String Category;
     private String Location;
     private String Offer;
 
     public Restaurant() {
+    }
+
+    public Restaurant(String about, String brand, String location, String offer) {
+        About = about;
+        Brand = brand;
+        Location = location;
+        Offer = offer;
     }
 
     public String getAbout() {
@@ -16,10 +22,6 @@ public class Restaurant {
 
     public String getBrand() {
         return Brand;
-    }
-
-    public String getCategory() {
-        return Category;
     }
 
     public String getLocation() {

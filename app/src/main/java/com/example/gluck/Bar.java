@@ -3,12 +3,19 @@ package com.example.gluck;
 public class Bar {
     private String about;
     private String brand;
-    private String category;
     private String location;
     private String offer;
     private String image;
 
     public Bar() {
+    }
+
+    public Bar(String about, String brand, String location, String offer, String image) {
+        this.about = about;
+        this.brand = brand;
+        this.location = location;
+        this.offer = offer;
+        this.image = image;
     }
 
     public String getAbout() {
@@ -17,10 +24,6 @@ public class Bar {
 
     public String getBrand() {
         return brand;
-    }
-
-    public String getCategory() {
-        return category;
     }
 
     public String getLocation() {
